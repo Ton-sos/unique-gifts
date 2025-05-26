@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Gift</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+
+      const gifts = {
+        "1": {
+          name: "Funny Cat NFT",
+          description: "A hilarious cat NFT for meme lovers.",
+          price: "3 TON",
+          image: "https://via.placeholder.com/400x300?text=Funny+Cat"
+        },
+        "2": {
+          name: "Happy Birthday Meme",
+          description: "Celebrate birthdays with this fun meme.",
+          price: "2 TON",
+          image: "https://via.placeholder.com/400x300?text=Birthday+Meme"
+        },
+        "3": {
+          name: "Surprise Sticker Pack",
+          description: "A surprise pack of digital stickers.",
+          price: "1.5 TON",
+          image: "https://via.placeholder.com/400x300?text=Stickers"
+        }
+      };
+
+      const gift = gifts[id];
+      if (gift) {
+        document.getElementById("gift-name").textContent = gift.name;
+        document.getElementById("gift-desc").textContent = gift.description;
+        document.getElementById("gift-price").textContent = "Price: " + gift.price;
+        document.getElementById("gift-image").src = gift.image;
+      }
+    });
+  </script>
+</head>
+<body class="bg-[#0f0f1c] text-white font-sans p-8">
+
+  <div class="max-w-2xl mx-auto bg-[#1a1a2e] p-6 rounded-xl shadow-lg">
+    <img id="gift-image" src="" alt="Gift" class="rounded mb-4 w-full">
+    <h1 id="gift-name" class="text-3xl font-bold mb-2 text-purple-400"></h1>
+    <p id="gift-desc" class="text-gray-300 mb-4"></p>
+    <p id="gift-price" class="text-purple-200 font-semibold mb-4"></p>
+    <button class="bg-purple-600 hover:bg-purple-500 text-white px-6 py-3 rounded-full text-lg">Send Gift</button>
+  </div>
+
+</body>
+</html>
