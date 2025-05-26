@@ -1,0 +1,10 @@
+{
+  "manifest_version": "2",
+  "name": "Unique Gifts",
+  "description": "Send digital gifts on TON",
+  "url": "https://ton-sos.github.io/unique-gifts/",
+  "icons": ["https://ton.org/favicon.png"],
+  "bridge_url": "https://bridge.tonapi.io/bridge",
+  "terms_of_use_url": "https://ton.org/terms",
+  "privacy_policy_url": "https://ton.org/privacy"
+}
