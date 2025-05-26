@@ -11,6 +11,9 @@
       color: #f1f1f1;
     }
   </style>
+
+  <!-- TON Connect UI -->
+  <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
 </head>
 <body class="font-sans">
 
@@ -22,7 +25,8 @@
       <a href="#" class="text-gray-300 hover:text-purple-400">Gifts</a>
       <a href="#" class="text-gray-300 hover:text-purple-400">Profile</a>
     </nav>
-    <button class="bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded-lg">Connect Wallet</button>
+    <!-- TON Wallet Connect Button Placeholder -->
+    <div id="ton-connect-button"></div>
   </header>
 
   <!-- Hero Section -->
@@ -101,6 +105,14 @@
       <a href="#" class="mx-2 hover:underline text-purple-400">Support</a>
     </div>
   </footer>
+
+  <!-- Init TON Connect -->
+  <script>
+    const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+      manifestUrl: 'https://ton-sos.github.io/unique-gifts/tonconnect-manifest.json',
+      buttonRootId: 'ton-connect-button'
+    });
+  </script>
 
 </body>
 </html>
