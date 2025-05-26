@@ -1,7 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" /><!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unique Gifts on TON</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-4 shadow-md bg-gray-800">
+    <div class="text-2xl font-bold text-purple-400">Unique</div>
+    <nav class="space-x-4 hidden md:flex">
+      <a href="#" class="text-gray-300 hover:text-purple-400">Categories</a>
+      <a href="#" class="text-gray-300 hover:text-purple-400">Gifts</a>
+      <a href="#" class="text-gray-300 hover:text-purple-400">Profile</a>
+    </nav>
+    <div id="ton-connect"></div>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-16 bg-gradient-to-r from-purple-900 via-indigo-900 to-gray-900">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">Send fun digital gifts with TON</h1>
+    <p class="text-lg mb-6 text-gray-300">Fast, secure, and fun gifting experience powered by the blockchain</p>
+    <button class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full text-lg">Start Sending</button>
+  </section>
+
+  <!-- TonConnect init -->
+  <script type="module">
+    const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+      manifestUrl: 'https://ton-sos.github.io/unique-gifts/tonconnect-manifest.json',
+      buttonRootId: 'ton-connect'
+    });
+  </script>
+</body>
+</html>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Unique Gifts on TON</title>
   <script src="https://cdn.tailwindcss.com"></script>
